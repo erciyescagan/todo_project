@@ -6,7 +6,7 @@ namespace App\Http;
 
 use App\Http\Interfaces\ApiInterface;
 
-class TodoManager
+class ProviderManager
 {
     public function getTasksFromProviders(ApiInterface $provider, $url){
         $provider->setUrl($url);

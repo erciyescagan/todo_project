@@ -1,15 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bd6d9135-42f5-48c4-83e2-a0e9fec041a7" name="Default Changelist" comment="" />
+    <list default="true" id="bd6d9135-42f5-48c4-83e2-a0e9fec041a7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Commands/GetTask.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/GetTask.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Adapters/ProviderOne.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Adapters/ProviderTwo.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ToDoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ToDoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/TodoManager.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -122,6 +133,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1o70bERucsE6hStXtMQBjzxmauW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -148,7 +160,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1612622395218</updated>
-      <workItem from="1612622397560" duration="22783000" />
+      <workItem from="1612622397560" duration="23356000" />
+      <workItem from="1612736523421" duration="3992000" />
     </task>
     <servers />
   </component>
@@ -161,26 +174,29 @@
     </state>
     <state x="2205" y="240" key="#com.intellij.ide.util.MemberChooser/1440.23.1920.1057/0.23.1440.808@1440.23.1920.1057" timestamp="1612625354251" />
     <state x="2205" y="240" key="#com.intellij.ide.util.MemberChooser/1440.23.1920.1057/0.23.1440.812@1440.23.1920.1057" timestamp="1612706368669" />
-    <state x="2201" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1612650789837">
+    <state x="2201" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1612732580635">
       <screen x="1440" y="23" width="1920" height="1057" />
     </state>
     <state x="2201" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1440.23.1920.1057/0.23.1440.812@1440.23.1920.1057" timestamp="1612650789837" />
+    <state x="2201" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1440.23.1920.1057/0.23.1440.814@1440.23.1920.1057" timestamp="1612732580635" />
     <state x="2138" y="313" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1612720336492">
       <screen x="1440" y="23" width="1920" height="1057" />
     </state>
     <state x="2138" y="313" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1440.23.1920.1057/0.23.1440.812@1440.23.1920.1057" timestamp="1612720336492" />
-    <state x="2071" y="284" key="NewPhpClassDialog" timestamp="1612706591457">
+    <state x="2071" y="284" key="NewPhpClassDialog" timestamp="1612732523637">
       <screen x="1440" y="23" width="1920" height="1057" />
     </state>
     <state x="2071" y="284" key="NewPhpClassDialog/1440.23.1920.1057/0.23.1440.808@1440.23.1920.1057" timestamp="1612625339999" />
     <state x="2071" y="284" key="NewPhpClassDialog/1440.23.1920.1057/0.23.1440.812@1440.23.1920.1057" timestamp="1612706591457" />
+    <state x="2071" y="284" key="NewPhpClassDialog/1440.23.1920.1057/0.23.1440.814@1440.23.1920.1057" timestamp="1612732523637" />
     <state x="2221" y="482" key="NewPhpFileDialog" timestamp="1612728953746">
       <screen x="1440" y="23" width="1920" height="1057" />
     </state>
     <state x="2221" y="482" key="NewPhpFileDialog/1440.23.1920.1057/0.23.1440.812@1440.23.1920.1057" timestamp="1612728953746" />
-    <state x="1554" y="277" width="602" height="548" key="find.popup" timestamp="1612727114425">
+    <state x="1554" y="277" width="602" height="548" key="find.popup" timestamp="1612740163442">
       <screen x="1440" y="23" width="1920" height="1057" />
     </state>
+    <state x="1554" y="277" width="602" height="548" key="find.popup/1440.23.1920.1057/0.23.1440.808@1440.23.1920.1057" timestamp="1612740163442" />
     <state x="1554" y="277" width="602" height="548" key="find.popup/1440.23.1920.1057/0.23.1440.812@1440.23.1920.1057" timestamp="1612727114425" />
     <state x="2184" y="349" key="refactoring.ChangeSignatureDialog" timestamp="1612643317918">
       <screen x="1440" y="23" width="1920" height="1057" />
@@ -196,7 +212,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/ToDoController.php</url>
-          <line>98</line>
+          <line>97</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

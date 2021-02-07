@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Http\Adapters;
+namespace App\Http\ApiProviders;
 
 
 use App\Http\Interfaces\ApiInterface;

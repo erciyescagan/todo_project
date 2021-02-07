@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Http\Adapters;
+namespace App\Http\ApiProviders;
 
 
 use App\Http\Interfaces\ApiInterface;
@@ -31,5 +31,6 @@ class ProviderOne implements ApiInterface
                 $newTask->save();
             }
         }
+        echo 'All Tasks Recorded Successfully ! </br> ';
     }
 }

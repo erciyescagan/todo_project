@@ -3,7 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Http\Interfaces\ApiInterface;
-use App\Http\TodoManager;
+use App\Http\ProviderManager;
 use App\Models\Task;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Http;
@@ -46,8 +46,8 @@ class GetTask extends Command
     {
         $url = $this->argument('url');
         $provider = '\App\Http\Adapters\\'. $this->argument('provider');
-        $todoManager = new TodoManager();
-        $todoManager->getTasksFromProviders(new $provider(), $url);
+        $providerManager = new ProviderManager();
+        $providerManager->getTasksFromProviders(new $provider(), $url);
     }
 
 }

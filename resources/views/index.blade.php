@@ -5,70 +5,71 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Enuygun</title>
+    <title>To Do Planner</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
 </head>
-<body>
+<body style="text-align:center;margin-top: 20px;">
+<div class="card">
+    <div class="card-header" id="headingOne">
+        <h5 class="mb-0">
+            Tüm İşlerin {{$finish}} Haftada Bitmesini Sağlayacak İş Planı Aşağıdaki Tablolarda Verilmiştir.
+        </h5>
+        <p style="margin-top: 15px">Her developer için 5 haftalık iş planı oluşturulmuştur.</p>
+    </div>
+</div>
+<div style="text-align: center">
+    @foreach($taskfordevelopers as $tasksForDeveloperKey => $tasksForDeveloper)
+        <div style="padding:20px;margin-top:50px;border: 1px solid darkred" class="col-md-12">
+            <h3 style="text-align: center">Developer {{$tasksForDeveloperKey}}</h3>
+            <h5 style="text-align: center">Developer Level :{{$tasksForDeveloper['level']}}</h5>
+            <h5 style="text-align: center">Total Working Hours : {{ $tasksForDeveloper['time'] }}</h5>
+        </div>
+        <div class="row">
+            @foreach($tasksForDeveloper['weekly'] as $tasksKey => $tasks)
+                <div style="margin-top: 20px" class="col-md-12"><h5>Week {{$tasksKey + 1}}</h5></div>
+                <table style="margin:5px 5px;border: 1px solid #f1f1f1" class="table col-md-12">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Task Name</th>
+                        <th>Estimated Duration</th>
+                        <th>Level</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php
+                    $weeklyWorkingHour = 0;
+                        ?>
+                    @foreach($tasks['tasks'] as $taskKey => $task)
 
+                        @if(isset($task['level']))
+                            <tr>
+                                <td>{{$taskKey}}</td>
+                                <td>{{$task['name']}}</td>
+                                <td>@if(isset($task['time'])){{$task['time']}} @else {{$task['estimated_duration']}} @endif</td>
+                                <td>{{$task['level']}}</td>
+                            </tr>
+                            <?php
+                            $weeklyWorkingHour += isset($task['time']) ? $task['time'] : $task['estimated_duration'] ;
+                            ?>
+                            @endif
 
-<div id="accordion">
-    @foreach($taskfordevelopers as $key => $taskfordeveloper)
-        <div class="card">
-            <div class="card-header" id="headingThree">
-                <h5 class="mb-1">
-                    <button class="btn btn-link w-100  collapsed" data-toggle="collapse" data-target="#{{$taskfordeveloper['name']}}" aria-expanded="false" aria-controls="collapseThree">
-                        <div class="bg-light  text-dark">
-                            <h5>{{$taskfordeveloper['name']}}</h5>
-                            Seviyesi:{{ $taskfordeveloper['level'] }}
-                            Çalışma Saati:{{ $taskfordeveloper['time'] }}
-                        </div>
-                    </button>
-                </h5>
-            </div>
-            <div id="{{$taskfordeveloper['name']}}" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                <div class="card-body">
-                    <div class="row">
-                        @foreach($taskfordeveloper['weekly'] as $keyx => $value)
-                            <div class="col-sm">
-                                <h5 class="text-dark text-center">{{ $keyx  + 1 }}. Hafta</h5>
-                                @foreach($value['tasks'] as $keyy => $tasks)
-                                    @if(isset($tasks['level']))
-                                        <div class="card col-md-12 my-3 p-2 bg-light">
-                                            <h5 class="card-title  text-center"> {{$tasks['name']}}</h5>
-                                            <div class="card-body ">
-                                                <hr class="m-1">
-                                                <div class="text-center">
-
-                                                    <span class="col-sm-6 p-0 m-0 text-center">Zorluk: {{$tasks['level']}}</span></br>
-                                                    <span class="col-sm-6 p-0 m-0 text-center">Süre: @if(isset($tasks['time'])){{$tasks['time']}} @else {{$tasks['estimated_duration']}} @endif</span>
-
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    @endif
-                                @endforeach
-                            </div>
-                        @endforeach
-                    </div>
+                    @endforeach
+                    </tbody>
+                </table>
+                <div style="background-color: #91de83;" class="col-md-12">
+                    <strong>Weekly Working Hour : </strong> <span>{{$weeklyWorkingHour}}</span><br>
+                    <strong>Total Job Count :</strong> <span>{{count($tasks['tasks'])}}</span>
                 </div>
-            </div>
+
+            @endforeach
+
         </div>
     @endforeach
-    <div class="card">
-        <div class="card-header" id="headingOne">
-            <h5 class="mb-0">
-                <button class="btn btn-link w-100 " data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    Tüm Tasklerin Toplam Tamamlanma Süresi =>  {{$finish}} Hafta
-                </button>
-            </h5>
-        </div>
-    </div>
 
 </div>
-
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>

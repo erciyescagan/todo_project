@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\gorevlist;
 use App\Models\Developer;
 use App\Models\Task;
 use Illuminate\Http\Request;
@@ -35,7 +34,7 @@ class ToDoController extends Controller
         }
 
 
-        foreach ($devlist as $key => $developer){
+        foreach ($devlist as $key => $developer) {
             $devlist[$key]['name'] = $developer['name'];
             $devlist[$key]['level'] = $developer['level'];
             $devlist[$key]['time'] = $developer['time'];
