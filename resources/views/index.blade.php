@@ -14,13 +14,13 @@
 <div class="card">
     <div class="card-header" id="headingOne">
         <h5 class="mb-0">
-            Tüm İşlerin {{$finish}} Haftada Bitmesini Sağlayacak İş Planı Aşağıdaki Tablolarda Verilmiştir.
+            Tüm İşlerin {{$finallyWeekCount}} Haftada Bitmesini Sağlayacak İş Planı Aşağıdaki Tablolarda Verilmiştir.
         </h5>
         <p style="margin-top: 15px">Her developer için 5 haftalık iş planı oluşturulmuştur.</p>
     </div>
 </div>
 <div style="text-align: center">
-    @foreach($taskfordevelopers as $tasksForDeveloperKey => $tasksForDeveloper)
+    @foreach($tasksForDevelopers as $tasksForDeveloperKey => $tasksForDeveloper)
         <div style="padding:20px;margin-top:50px;border: 1px solid darkred" class="col-md-12">
             <h3 style="text-align: center">Developer {{$tasksForDeveloperKey}}</h3>
             <h5 style="text-align: center">Developer Level :{{$tasksForDeveloper['level']}}</h5>

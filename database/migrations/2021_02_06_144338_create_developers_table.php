@@ -20,6 +20,7 @@ class CreateDevelopersTable extends Migration
             $table->string('level');
             $table->timestamps();
         });
+
     }
 
     /**
