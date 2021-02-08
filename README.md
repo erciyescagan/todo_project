@@ -55,11 +55,11 @@ $ task:remove --task_name=all
 3 - Need to use below command for create a new developer
   
 ```bash
- $ developer:crate name={name} level={level}
+ $ developer:create name={name} level={level}
  ```
 Ex :
 ```bash
- $ developer:crate --name=Dev6 --level=3
+ $ developer:create --name=Dev6 --level=3
  ```
 
 
