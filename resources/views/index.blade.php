@@ -12,7 +12,7 @@
 </head>
 <body style="text-align:center;margin-top: 20px;">
 <div class="card">
-    <div class="card-header" id="headingOne">
+    <div class="card-header">
         <h5 class="mb-0">
             Tüm İşlerin {{$finallyWeekCount}} Haftada Bitmesini Sağlayacak İş Planı Aşağıdaki Tablolarda Verilmiştir.
         </h5>
