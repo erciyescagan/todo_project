@@ -1,8 +1,5 @@
-MEDIACLICK.COM.TR
-
 Author : Mert Erciyes Çağan<br>
-Project : To Do Planning Case Study
-
+Project : To Do Planning
 Requirements
 ------------
 
